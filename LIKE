@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EncuentraPatitas</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7f8;
+}
+
+header{
+    background:#ff914d;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+header h1{
+    font-size:45px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+nav{
+    background:#ff7b25;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#fff4c2;
+}
+
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    padding:50px;
+    gap:40px;
+}
+
+.hero img{
+    width:350px;
+    border-radius:15px;
+}
+
+.texto{
+    max-width:500px;
+}
+
+.texto h2{
+    color:#ff7b25;
+    margin-bottom:20px;
+}
+
+.texto p{
+    font-size:18px;
+    line-height:1.7;
+}
+
+section{
+    width:90%;
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0px 5px 15px rgba(0,0,0,.15);
+}
+
+section h2{
+    color:#ff7b25;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:12px;
+    margin-top:10px;
+    margin-bottom:20px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    background:#ff914d;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#ff7b25;
+}
+
+footer{
+    background:#ff914d;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>🐾 EncuentraPatitas</h1>
+
+<p>Conectando mascotas perdidas con sus familias.</p>
+
+</header>
+
+<nav>
+
+<a href="#">Inicio</a>
+<a href="#">Reportar</a>
+<a href="#">Mascotas</a>
+<a href="#">Contacto</a>
+
+</nav>
+
+<div class="hero">
+
+<img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?w=600" alt="Perro">
+
+<div class="texto">
+
+<h2>¿Qué es EncuentraPatitas?</h2>
+
+<p>
+
+EncuentraPatitas es una plataforma diseñada para ayudar a las personas a encontrar a sus mascotas perdidas y reunirlas con sus familias. También permite reportar mascotas encontradas para aumentar las posibilidades de un reencuentro.
+
+</p>
+
+</div>
+
+</div>
+
+<section>
+
+<h2>Formulario de Reporte</h2>
+
+<form onsubmit="enviarFormulario(event)">
+
+<label>Nombre de la mascota</label>
+
+<input type="text" id="nombre" required>
+
+<label>Tipo de reporte</label>
+
+<select id="tipo">
+
+<option>Mascota Perdida</option>
+
+<option>Mascota Encontrada</option>
+
+</select>
+
+<label>Especie</label>
+
+<select>
+
+<option>Perro</option>
+
+<option>Gato</option>
+
+<option>Ave</option>
+
+<option>Otro</option>
+
+</select>
+
+<label>Lugar donde fue vista</label>
+
+<input type="text" required>
+
+<label>Descripción</label>
+
+<textarea rows="5" required></textarea>
+
+<label>Teléfono de contacto</label>
+
+<input type="tel" required>
+
+<button type="submit">
+
+Enviar Reporte
+
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>
+
+© 2026 EncuentraPatitas | Porque cada mascota merece volver a casa.
+
+</p>
+
+</footer>
+
+<script>
+
+function enviarFormulario(event){
+
+event.preventDefault();
+
+let nombre=document.getElementById("nombre").value;
+
+alert("¡Gracias! El reporte de " + nombre + " ha sido registrado correctamente.");
+
+}
+
+</script>
+
+</body>
+</html>
